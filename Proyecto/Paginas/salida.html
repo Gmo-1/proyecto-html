@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Salida</title>
+    <link rel="stylesheet" href="./../Assets/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="./../Assets/JS/validacion.js"></script>
+</head>
+<body class="fondo">
+    <div class="cajaRegistro">
+        <div class="boton-volver">
+            <a style="text-decoration: none; color: white; text-align: left;"href="./funcionesTaller.html"><button type="button" class="btn btn-primary">Volver</a>
+        </div>
+        <h1 class="col-12">Formulario de Salida</h1>
+        <div class="col-12">
+            <h6>¿La Reparación fue rechazada?</h6>
+            <input type="radio" onchange="rechazo()" name="radio" id="verdadero" value="Si"> Si
+            <input type="radio" onchange="ingreso()" name="radio" id="verdadero" value="No"checked> No
+        </div>
+    
+        <form action="./Reporte decisiones.html" id="ingresoForm" style="display: block;">
+            <center>
+                <h6 for="poliza" class="form-label">N° Poliza</h6>
+                <input type="number" id="poliza" class="form-control" onKeyPress="if(this.value.length==12) return false;" min="1" required></input>
+            <div class="col-md-10">
+                    <h6 for="descripcionRe" class="form-label">Detalle de Reparación</h6>
+                    <textarea style="resize: none; height: 100px;" type="text" id="descripcionRep" class="form-control" required></textarea>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary m-2">Enviar</button>
+            </center>       
+        </form>
+        <form action="./reporteRechazado.html" id="rechazoForm" style="display: block;">
+            <center>
+                <h6 for="poliza" class="form-label">N° Poliza</h6>
+                <input type="number" id="poliza" class="form-control" onKeyPress="if(this.value.length==12) return false;" min="1" required></input>
+            <div class="col-md-10">
+                    <h6 for="descripcionRe" class="form-label">Detalle de Rechazo</h6>
+                    <textarea style="resize: none; height: 100px;" type="text" id="descripcionRe" class="form-control" required></textarea>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary m-2">Enviar</button>
+            </center>       
+        </form>
+    </div>
+    <script>
+       window.onload = ingreso();
+    </script>
+</body>
+</html>

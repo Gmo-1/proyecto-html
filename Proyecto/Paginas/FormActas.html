@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Assets/CSS/style.css">
+    <title>Registro Accidente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="./../Assets/JS/validacion.js"></script>
+</head>
+<body class="fondo">
+        <form method="post"class="cajaRegistro" id="Actas">
+            <h1>Registro Accidente</h1>
+            <div>
+                <input type="radio" id="Rechazo" name="TipoActa" value="Rechazo" required>Rechazado
+                <input type="radio" id="Aceptación" name="TipoActa" value="Aceptación" required>Aceptado
+            </div>
+            <br>
+            <label>Resultado</label>
+            <input type="text" id="resultado" class="input" required></input>
+            <label>Detalle</label>
+            <textarea style="resize: none; height: 100px;"type="text" id="Detalle" class="input" required></textarea>
+            <br>
+            <a style="text-decoration: none; color: gray"href="./Reportedecisiones.html"><button type="submit" onclick="nose()" class="btn btn-outline-secondary">Registrar</a>
+        </form>
+</body> 
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso</title>
+    <link rel="stylesheet" href="./../Assets/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="./../Assets/JS/validacion.js"></script>
+</head>
+<body class="fondo">
+    <div class="cajaRegistro">
+        <div class="boton-volver">
+            <a style="text-decoration: none; color: white; text-align: left;"href="./funcionesTaller.html"><button type="button" class="btn btn-primary">Volver</a>
+        </div>
+        <h1 class="col-12">Formulario de Ingreso</h1>
+        <div class="col-12">
+            <h6>¿El sinisetro fue rechazado?</h6>
+            <input type="radio" onchange="rechazo()" name="radio" id="verdadero" value="Si"> Si
+            <input type="radio" onchange="ingreso()" name="radio" id="verdadero" value="No"checked> No
+        </div>
+    
+        <form action="./TablaActa.html" id="ingresoForm" style="display: block;">
+            <center>
+                <h6 for="patente" class="form-label">N°Patente</h6>
+                <input type="text" id="patente" class="form-control" maxlength="6" required></input>
+                <label for="fechaIng" class="form-label">Fecha y Hora del Ingreso</label>
+                <input type="datetime-local" id="fechaIng" class="form-control" required>
+            <br/>
+            <button type="submit" class="btn btn-primary m-2">Enviar</button>
+            </center>       
+        </form>
+        <form action="./funcionesTaller.html" id="rechazoForm" style="display: block;">
+            <center>
+                <h6 for="poliza" class="form-label">Mala cuea noma</h6>
+            <button type="submit" class="btn btn-primary m-2">Enviar</button>
+            </center>       
+        </form>
+    </div>
+    <script>
+       window.onload = ingreso();
+    </script>
+</body>
+</html>

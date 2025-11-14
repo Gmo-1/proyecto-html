@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Assets/CSS/style.css">
+    <title>Registro Accidente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="./../Assets/JS/validacion.js"></script>
+</head>
+<body class="fondo">
+    <center>
+        <form action="./Tabla-Grua.html" method="post"class="cajaRegistro" id="accidenteForm">
+                <div class="boton-volver">
+                    <a style="text-decoration: none; color: white; text-align: left;"href="./funcionesCliente.html"><button type="button" class="btn btn-primary">Volver</a>
+                </div>
+                <div class="col-12">
+                    <h1>Registro accidentes</h1>
+                </div>
+                <div class="col-md-3">
+                    <label for="nombres" class="form-label">Nombres</label><br>
+                    <input type="text" id="nombres" class="form-control" maxlength="50" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="apellidom" class="form-label">Apellido Materno</label>
+                    <input type="text" id="apellidom" class="form-control" maxlength="20" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="apellidom" class="form-label">Apellido Paterno</label>
+                    <input type="text" id="apellidop" class="form-control" maxlength="20" required>
+                </div>
+                <div class="col-5">
+                    <label for="rut" class="form-label">Rut</label><br>
+                    <input type="number" id="rut" class="form-control" onKeyPress="if(this.value.length==9) return false;" min="1" required></input>
+                </div>
+                <div class="col-5">
+                    <label for="poliza" class="form-label">N° Poliza</label><br>
+                    <input type="number" id="poliza" class="form-control" onKeyPress="if(this.value.length==12) return false;" min="1" required></input>
+                </div>
+                <div class="col-5">
+                    <label for="fechaInc" class="form-label">Fecha y Hora del Incidente</label>
+                    <input type="datetime-local" id="fechaInc" class="form-control" required>
+                </div>
+                <div class="col-5">
+                    <label for="ubicacionInc" class="form-label">Ubicación Del Incidente</label><br>
+                    <input type="text" id="ubicacionInc" class="form-control" required>
+                </div>
+                <div class="col-3">
+                    <label for="marcaA" class="form-label">Marca Auto Afectado</label>
+                    <input type="text" id="marcaA" class="form-control" required>
+                </div>
+                <div class="col-3">
+                    <label for="modeloA" class="form-label">Modelo Auto Afectado</label>
+                    <input type="text" id="modeloA" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="placa" class="form-label">Número de Matricula</label>
+                    <input type="text" id="placa" class="form-control" maxlength="6" required>
+                </div>
+                
+                <div class="col-md-10">
+                    <label for="descripcionInc" class="form-label">Descripción Del Incidente</label><br>
+                    <textarea style="resize: none; height: 100px;" type="text" id="descripcionInc" class="form-control" required></textarea>
+                </div>
+                <div class="col-md-10">
+                    <label for="dañoAuto" class="form-label">Descripción Daño al Auto</label>
+                    <textarea style="resize: none; height: 100px;"type="text" id="dañoAuto" class="form-control" required></textarea>
+                </div>
+                <div class="col-md-5">
+                    <label for="condenFile" class="form-label">Constancia o Denuncia</label>
+                    <input class="form-control" type="file" id="condenFile" required>
+                </div>
+                <div class="col-md-5">
+                    <label for="licenciaFile" class="form-label">Foto Licencia de Conducir</label>
+                    <input class="form-control" type="file" id="licenciaFile" required>
+                </div>
+                    <br/>
+                    <button type="button" onclick="validarAccidente()" class="btn btn-outline-secondary">Registrar</button>
+        </form>
+    </center>
+</body>
+</html>
