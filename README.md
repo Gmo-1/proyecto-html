@@ -1,0 +1,1 @@
+Formulario web desarrollado en HTML, CSS y JavaScript para la gestión de datos de clientes y vehículos en un taller automotriz. Este proyecto representa una práctica de front-end básico, enfocada en el uso correcto de formularios, etiquetas semánticas y validación inicial.
